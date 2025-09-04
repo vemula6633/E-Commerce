@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Single Page E-Commerce Website</title>
+  <style>
+    /* Reset & Layout */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+      background-color: #ecf0f1;
+      overflow-y: auto;
+    }
+
+    section {
+      display: none;
+    }
+
+    section:target {
+      display: block;
+    }
+
+    section:first-of-type {
+      display: block;
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product-card button:hover {
+      background-color: #1e8449;
+    }
+
+    .checkout-btn {
+      padding: 10px 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .checkout-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .product-description {
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .main-content h1 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h2>My Shop</h2>
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#products">Product Details</a></li>
+      <li><a href="#checkout">Checkout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Dashboard Page -->
+    <section id="dashboard">
+      <h1>Dashboard</h1>
+      <p>Welcome to your e-commerce dashboard. From here, you can view products and manage your shop.</p>
+    </section>
+
+    <!-- Product Details Page -->
+    <section id="products">
+      <h1>Product Details</h1>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="Product 1">
+          <h3>Wireless Headphones</h3>
+          <p>$99.99</p>
+          <p class="product-description">Noise-cancelling over-ear headphones.</p>
+          <a href="#checkout"><button>Buy Now</button></a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="Product 2">
+          <h3>Smart Watch</h3>
+          <p>$149.99</p>
+          <p class="product-description">Fitness tracking and notifications on your wrist.</p>
+          <a href="#checkout"><button>Buy Now</button></a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="Product 3">
+          <h3>Bluetooth Speaker</h3>
+          <p>$59.99</p>
+          <p class="product-description">Portable speaker with powerful bass.</p>
+          <a href="#checkout"><button>Buy Now</button></a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="https://via.placeholder.com/200" alt="Product 4">
+          <h3>Fitness Tracker</h3>
+          <p>$39.99</p>
+          <p class="product-description">Lightweight tracker with heart rate monitor.</p>
+          <a href="#checkout"><button>Buy Now</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Page -->
+    <section id="checkout">
+      <h1>Checkout</h1>
+      <p>You are purchasing: <strong>Your selected product</strong></p>
+      <p>Total: <strong>$XX.XX</strong></p>
+      <button class="checkout-btn">Place Order</button>
+    </section>
+  </main>
+</body>
+</html>
